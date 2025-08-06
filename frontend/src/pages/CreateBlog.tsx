@@ -45,7 +45,7 @@ function CreateBlog() {
     const loadingToast = toast.loading("Creating your blog...");
 
     try {
-      await axios.post("http://localhost:3000/blogs/create", {
+      await axios.post("/blogs/create", {
         ...blog,
         author: userId,
       });
@@ -63,7 +63,7 @@ function CreateBlog() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/users/getAll")
+      .get("/users/getAll")
       .then((response) => {
         const user = response.data.find(
           (user: { email: string }) => user.email === email

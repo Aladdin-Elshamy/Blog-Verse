@@ -24,7 +24,7 @@ function EditBlog() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/blogs/${id}`, {
+      await axios.put(`/blogs/${id}`, {
         ...blog,
       });
       alert(

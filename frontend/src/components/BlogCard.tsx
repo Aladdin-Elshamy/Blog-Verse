@@ -23,7 +23,7 @@ function BlogCard({
   async function handleDelete() {
     const loadingToast = toast.loading("Deleting blog...");
     try {
-      await axios.delete(`http://localhost:3000/blogs/${_id}`);
+      await axios.delete(`/blogs/${_id}`);
       toast.success("Blog deleted successfully!", { id: loadingToast });
       // Use a small delay before reload to show the success message
       setTimeout(() => window.location.reload(), 1000);

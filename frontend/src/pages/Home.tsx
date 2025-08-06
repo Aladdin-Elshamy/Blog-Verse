@@ -17,7 +17,7 @@ function HomePage() {
     const loadingToast = toast.loading("Loading blogs...");
     
     axios
-      .get("http://localhost:3000/blogs/all")
+      .get("/blogs/all")
       .then((response) => {
         setBlogs(response.data);
         setFilteredBlogs(response.data);
@@ -41,7 +41,7 @@ function HomePage() {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/blogs/search?query=${encodeURIComponent(
+          `/blogs/search?query=${encodeURIComponent(
             searchQuery
           )}`
         );

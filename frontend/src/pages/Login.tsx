@@ -30,7 +30,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/login",
+        "/users/login",
         user
       );
       

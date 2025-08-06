@@ -18,8 +18,8 @@ function MyBlogs() {
       const loadingToast = toast.loading("Fetching your blogs...");
       try {
         const [usersResponse, blogsResponse] = await Promise.all([
-          axios.get(`http://localhost:3000/users/getAll`),
-          axios.get(`http://localhost:3000/blogs/all`)
+          axios.get(`/users/getAll`),
+          axios.get(`/blogs/all`)
         ]);
 
         const targetUser = usersResponse.data.find(

@@ -29,7 +29,7 @@ function Register() {
     const loadingToast = toast.loading("Creating your account...");
 
     try {
-      await axios.post("http://localhost:3000/users/register", user);
+      await axios.post("/users/register", user);
       localStorage.setItem("email", JSON.stringify(user.email));
       
       toast.success("Registration successful! Redirecting to login...", { id: loadingToast });
