@@ -23,8 +23,7 @@ A full-stack blog application where users can sign up, sign in, create, edit, an
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
-- (Add database or other requirements)
-
+- 
 ### Steps
 1. **Clone the Repository**:
    ```bash
@@ -35,7 +34,6 @@ A full-stack blog application where users can sign up, sign in, create, edit, an
 2. **Install Dependencies**:
    - Backend:
      ```bash
-     cd backend
      npm install
      ```
    - Frontend:
@@ -57,17 +55,17 @@ A full-stack blog application where users can sign up, sign in, create, edit, an
    - Start the backend server:
      ```bash
      cd backend
-     npm start
+     npm run dev
      ```
    - Start the frontend development server:
      ```bash
      cd frontend
-     npm start
+     npm run dev
      ```
 
 5. **Access the Application**:
-   - Open `http://localhost:3000` in your browser for the frontend.
-   - The backend API runs on `http://localhost:5000` (or your specified port).
+   - Open `http://localhost:5173` in your browser for the frontend.
+   - The backend API runs on `http://localhost:3000` (or your specified port).
 
 ## Project Structure
 ```
