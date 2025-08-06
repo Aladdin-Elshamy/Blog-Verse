@@ -10,7 +10,7 @@ async function register(req,res) {
         }
         const hash = await bcrypt.hash(user.password,2) 
         const newUser = await User.create({...user,password:hash})
-        let token = jwt.sign({password:hash,email:user.email},"secret")
+        let token = jwt.sign({password:hash,email:user.email},process.env.JWT_SECRET)
         res.status(201).send({
             token,
             message:"user created successfully"
@@ -45,7 +45,7 @@ async function login(req,res) {
         }
         const match = await bcrypt.compare(user.password,findUser.password)
         if(match) {
-            let token = jwt.sign({password:hash,email:user.email},"secret")
+            let token = jwt.sign({password:hash,email:user.email},process.env.JWT_SECRET)
             res.status(201).send({
                 token,
                 message:"user logged in successfully"
