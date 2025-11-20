@@ -110,18 +110,19 @@ function HomePage() {
 
           <form
             onSubmit={handleSearch}
-            className="flex w-full max-w-lg mx-auto mb-8"
+            className="flex w-full max-w-lg mx-auto mb-8 min-w-0"
           >
             <input
               type="text"
               placeholder="Search blogs..."
-              className="flex-grow px-4 py-3 rounded-l-lg border-0 outline-none bg-gray-800 text-white"
+              className="min-w-0 flex-grow px-4 py-3 rounded-l-lg border-0 outline-none bg-gray-800 text-white"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
+
             <button
               type="submit"
-              className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-r-lg hover:from-purple-600 hover:to-pink-600 transition duration-200"
+              className="flex-shrink-0 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-r-lg hover:from-purple-600 hover:to-pink-600 transition duration-200"
               disabled={isSearching}
             >
               {isSearching ? "Searching..." : "Search"}
