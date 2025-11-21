@@ -3,7 +3,7 @@
 A full-stack blog application where users can sign up, sign in, create, edit, and delete blogs, as well as read and search for blogs by author name, tags, or title. Built with React, Tailwind CSS, Node.js, and Express.
 
 ## Live Preview
-[Blog Platform Live](https://blog-verse-production.up.railway.app/)
+[Blog Platform Live](https://blog-verse-06tc.onrender.com/)
 
 ## Features
 - **User Authentication**: Sign up and sign in securely to access personalized features.
